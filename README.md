@@ -95,7 +95,7 @@
 ### 📋 상세 정보 · ⚙ 설정 · 트레이
 <img src="docs/images/detail.png" width="560" alt="세션 상세"><br>
 <img src="docs/images/settings.png" width="640" alt="설정"><br>
-<img src="docs/images/tray.svg" width="360" alt="트레이 메뉴">
+<img src="docs/images/tray.png" width="360" alt="트레이 메뉴">
 
 - **상세 정보**(상태칸 더블클릭): 경로/세션ID 확인·복사 + 그 세션의 모든 액션
 - **설정:** 언어(한/영/일/중) · 이미지 붙여넣기 · WT 창 방식(탭/따로) · 로그인 자동 복원 · 절전 방지 · 리모트 유휴 유지
