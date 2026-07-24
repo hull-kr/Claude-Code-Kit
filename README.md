@@ -67,7 +67,7 @@
 ### 🖼️ 이미지 붙여넣기
 캡처(`Win`+`Shift`+`S`) 후 터미널에서 **`Ctrl`+`Shift`+`V`** → 클립보드 이미지가 현재 폴더에 저장되고 그 경로가 자동으로 입력됩니다.
 
-<img src="docs/images/image-paste.svg" width="640" alt="이미지 붙여넣기">
+<img src="docs/images/image-paste.png" width="640" alt="이미지 붙여넣기">
 
 ### 🗂️ 컨트롤 패널
 - **탭:** ★관리 / ●열린 / ○닫힌 / ▦모든 세션 / ⚙설정 / ?사용법
