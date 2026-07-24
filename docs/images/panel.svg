@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="480" viewBox="0 0 920 480" font-family="Segoe UI, Malgun Gothic, sans-serif">
+  <defs>
+    <style>
+      .txt{fill:#e6e6ee} .sub{fill:#8a8a9a} .hdr{fill:#9a9ab0;font-size:13px}
+      .cell{fill:#dcdce6;font-size:13px}
+    </style>
+  </defs>
+  <!-- bg -->
+  <rect width="920" height="480" fill="#16161e"/>
+  <!-- title bar -->
+  <rect width="920" height="30" fill="#12121a"/>
+  <circle cx="16" cy="15" r="6" fill="#7c6ce0"/>
+  <text x="30" y="20" class="txt" font-size="12">Claude Code Kit · 빌드 2026-07-24</text>
+  <text x="880" y="20" class="sub" font-size="14">— □ ✕</text>
+
+  <!-- sidebar -->
+  <rect x="0" y="30" width="200" height="450" fill="#14141c"/>
+  <text x="24" y="66" class="txt" font-size="17" font-weight="bold">Claude Code Kit</text>
+  <!-- nav -->
+  <text x="28" y="112" class="sub" font-size="14">★ 관리 세션</text>
+  <rect x="0" y="132" width="200" height="40" fill="#7c6ce0"/>
+  <text x="28" y="157" fill="#fff" font-size="14">● 열린 세션</text>
+  <text x="28" y="200" class="sub" font-size="14">○ 닫힌 세션</text>
+  <text x="28" y="240" class="sub" font-size="14">▦ 모든 세션</text>
+  <text x="28" y="292" class="sub" font-size="14">⚙ 설정</text>
+  <text x="28" y="330" class="sub" font-size="14">? 사용 설명서</text>
+
+  <!-- grid header -->
+  <rect x="200" y="30" width="720" height="34" fill="#24242e"/>
+  <text x="238" y="52" class="hdr" text-anchor="middle">관리</text>
+  <text x="322" y="52" class="hdr" text-anchor="middle">상태</text>
+  <text x="440" y="52" class="hdr" text-anchor="middle">제목(대화)</text>
+  <text x="588" y="52" class="hdr" text-anchor="middle">폴더</text>
+  <text x="650" y="52" class="hdr" text-anchor="middle">종류</text>
+  <text x="716" y="52" class="hdr" text-anchor="middle">시작</text>
+  <text x="792" y="52" class="hdr" text-anchor="middle">리모트</text>
+  <text x="852" y="52" class="hdr" text-anchor="middle">열기</text>
+  <text x="898" y="52" class="hdr" text-anchor="middle">동작</text>
+
+  <!-- row 1 -->
+  <g transform="translate(0,64)">
+    <rect x="210" y="8" width="56" height="24" rx="7" fill="#7c6ce0"/>
+    <text x="238" y="24" text-anchor="middle" font-size="12"><tspan fill="#ffd700">★</tspan> <tspan fill="#fff">관리</tspan></text>
+    <text x="298" y="24" fill="#e8a838" font-size="13">● 작업 중</text>
+    <text x="440" y="24" class="cell" text-anchor="middle">ClaudeCodeHelper개발</text>
+    <text x="588" y="24" class="cell" text-anchor="middle">D:\…</text>
+    <text x="650" y="24" class="cell" text-anchor="middle">포그라운드</text>
+    <text x="716" y="24" class="cell" text-anchor="middle">07-24 13:13</text>
+    <rect x="762" y="8" width="60" height="24" rx="7" fill="#50c88c"/>
+    <text x="792" y="24" text-anchor="middle" fill="#fff" font-size="12">● 켜짐</text>
+    <rect x="828" y="8" width="48" height="24" rx="7" fill="#c85656"/>
+    <text x="852" y="24" text-anchor="middle" fill="#fff" font-size="12">닫기</text>
+    <rect x="874" y="8" width="60" height="24" rx="7" fill="#424256"/>
+    <text x="904" y="24" text-anchor="middle" fill="#fff" font-size="12">bg 전환</text>
+  </g>
+  <!-- row 2 -->
+  <g transform="translate(0,104)">
+    <rect x="210" y="8" width="56" height="24" rx="7" fill="#424256"/>
+    <text x="238" y="24" text-anchor="middle" fill="#8a8a9a" font-size="12">＋ 담기</text>
+    <text x="304" y="24" fill="#50c88c" font-size="13">● 대기 <tspan fill="#7cd0ff">🔹2</tspan></text>
+    <text x="440" y="24" class="cell" text-anchor="middle">강의자료 만들기</text>
+    <text x="588" y="24" class="cell" text-anchor="middle">D:\…</text>
+    <text x="650" y="24" class="cell" text-anchor="middle">포그라운드</text>
+    <text x="716" y="24" class="cell" text-anchor="middle">07-24 14:41</text>
+    <rect x="762" y="8" width="60" height="24" rx="7" fill="#50c88c"/>
+    <text x="792" y="24" text-anchor="middle" fill="#fff" font-size="12">● 켜짐</text>
+    <rect x="828" y="8" width="48" height="24" rx="7" fill="#c85656"/>
+    <text x="852" y="24" text-anchor="middle" fill="#fff" font-size="12">닫기</text>
+    <rect x="874" y="8" width="60" height="24" rx="7" fill="#424256"/>
+    <text x="904" y="24" text-anchor="middle" fill="#fff" font-size="12">bg 전환</text>
+  </g>
+  <!-- row 3 (closed) -->
+  <g transform="translate(0,144)">
+    <text x="304" y="24" class="sub" font-size="13">닫힘</text>
+    <text x="440" y="24" class="sub" text-anchor="middle" font-size="13">[이름없음] AICA</text>
+    <text x="588" y="24" class="sub" text-anchor="middle" font-size="13">D:\…</text>
+    <text x="650" y="24" class="sub" text-anchor="middle" font-size="13">닫힘</text>
+    <text x="716" y="24" class="sub" text-anchor="middle" font-size="13">07-24 10:03</text>
+    <rect x="828" y="8" width="48" height="24" rx="7" fill="#50c88c"/>
+    <text x="852" y="24" text-anchor="middle" fill="#fff" font-size="12">열기</text>
+    <rect x="874" y="8" width="60" height="24" rx="7" fill="#424256"/>
+    <text x="904" y="24" text-anchor="middle" fill="#8a8a9a" font-size="12">삭제</text>
+  </g>
+
+  <!-- bottom bar -->
+  <rect x="200" y="428" width="720" height="52" fill="#14141c"/>
+  <rect x="214" y="440" width="86" height="30" rx="6" fill="#424256"/>
+  <text x="257" y="460" text-anchor="middle" fill="#dcdce6" font-size="12">새로고침</text>
+  <rect x="308" y="440" width="104" height="30" rx="6" fill="#7c6ce0"/>
+  <text x="360" y="460" text-anchor="middle" fill="#fff" font-size="12">＋ 새 세션</text>
+  <rect x="424" y="440" width="120" height="30" rx="6" fill="#424256"/>
+  <text x="484" y="460" text-anchor="middle" fill="#dcdce6" font-size="12">선택 관리 추가</text>
+  <rect x="556" y="440" width="96" height="30" rx="6" fill="#424256"/>
+  <text x="604" y="460" text-anchor="middle" fill="#dcdce6" font-size="12">선택 닫기</text>
+</svg>
