@@ -78,7 +78,7 @@
 ### ➕ 새 세션
 하단 **`＋ 새 세션`** → 폴더 선택 + 세션명 + **원격 연결**(기본 켜짐) + 관리 추가(선택). 새 폴더의 "이 폴더를 신뢰?" 물음은 자동 통과, 이름도 자동 지정.
 
-<img src="docs/images/new-session.svg" width="560" alt="새 세션">
+<img src="docs/images/new-session.png" width="560" alt="새 세션">
 
 ### 🌙 bg 전환 / 📱 리모트 컨트롤
 - **bg 전환:** 실행 중 세션을 백그라운드로 (탭은 닫히고 계속 실행, 이름에 `[MMddHHmm]` 시각)
