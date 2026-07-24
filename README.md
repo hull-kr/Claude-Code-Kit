@@ -21,7 +21,7 @@
 
 | Claude Code CLI | CCKit 패널 |
 |---|---|
-| `claude` / `ccd` (새 세션) | **＋ 새 세션** 버튼 (폴더·이름·원격 옵션) |
+| `claude` (새 세션) | **＋ 새 세션** 버튼 (폴더·이름·원격 옵션) |
 | `claude --resume <id>` | 닫힌 세션 **열기** / **전체 이어서 열기** |
 | `/remote-control` | 세션의 **리모트** 토글 |
 | `/bg` (백그라운드) | **bg 전환** 버튼 |
@@ -29,6 +29,8 @@
 | `claude agents` | 상태칸 **🔹N 뱃지 → 클릭** (서브에이전트 목록) |
 | `claude attach <id>` | 백그라운드 **화면표시** |
 | 이미지 경로 입력 | **Ctrl+Shift+V** (클립보드 이미지 자동 저장·입력) |
+
+> ℹ️ **`ccd`** 는 Claude 순정 명령이 아니라 **CCKit 이 추가하는 단축 명령**입니다 (`ccd = claude --dangerously-skip-permissions`). 아래 [ccd 단축 명령](#️-ccd-단축-명령) 참고.
 
 ---
 
