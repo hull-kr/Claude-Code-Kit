@@ -108,7 +108,10 @@
 ```
 ccd = claude --dangerously-skip-permissions
 ```
-권한 확인을 건너뛰고 바로 실행 (설정에서 끌 수 있음)
+어느 폴더에서든 `ccd` 만 치면 **권한 확인을 건너뛰고(bypass permissions on)** 바로 Claude Code 가 실행됩니다. (설정에서 설치/해제)
+
+<img src="docs/images/ccd-cmd.png" width="420" alt="ccd 입력"> <img src="docs/images/ccd-run.png" width="420" alt="ccd 실행 결과">
+
 
 ---
 
