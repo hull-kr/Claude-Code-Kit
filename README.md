@@ -11,7 +11,7 @@
   &nbsp;·&nbsp; Windows 10/11 &nbsp;·&nbsp; 무료(Freeware)
 </p>
 
-<p align="center"><img src="docs/images/panel.svg" width="820" alt="컨트롤 패널"></p>
+<p align="center"><img src="docs/images/panel.png" width="820" alt="컨트롤 패널"></p>
 
 ---
 
