@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="440" viewBox="0 0 640 440" font-family="Segoe UI, Malgun Gothic, sans-serif">
+  <rect width="640" height="440" fill="#16161e"/>
+  <rect width="640" height="30" fill="#12121a"/>
+  <text x="16" y="20" fill="#e6e6ee" font-size="13">세션 상세 정보</text>
+  <text x="616" y="20" fill="#8a8a9a" font-size="14">✕</text>
+
+  <rect x="20" y="48" width="600" height="200" fill="#24242e" stroke="#3a3a48"/>
+  <g font-family="Consolas, monospace" font-size="13" fill="#dcdce6">
+    <text x="34" y="74">제목    : 강의자료 만들기</text>
+    <text x="34" y="98">종류    : 열린 세션</text>
+    <text x="34" y="122">상태    : busy</text>
+    <text x="34" y="146">시작    : 07-24 14:41</text>
+    <text x="34" y="170">리모트  : <tspan fill="#50c88c">● 켜짐</tspan>  (session_01WJASGWk…)</text>
+    <text x="34" y="200">폴더    : D:\claude code\my-project</text>
+    <text x="34" y="224">세션ID  : 4ace9467-7a4a-4b04-83fc-53d4b78807e5</text>
+  </g>
+
+  <rect x="20" y="262" width="130" height="40" fill="#24242e"/>
+  <text x="85" y="287" text-anchor="middle" fill="#dcdce6" font-size="13">폴더 열기</text>
+  <rect x="158" y="262" width="130" height="40" fill="#24242e"/>
+  <text x="223" y="287" text-anchor="middle" fill="#dcdce6" font-size="13">세션ID 복사</text>
+
+  <!-- action row -->
+  <rect x="20" y="322" width="140" height="42" fill="#424256"/>
+  <text x="90" y="349" text-anchor="middle" fill="#fff" font-size="13">리모트 끄기</text>
+  <rect x="168" y="322" width="140" height="42" fill="#424256"/>
+  <text x="238" y="349" text-anchor="middle" fill="#fff" font-size="13">관리 제거</text>
+  <rect x="316" y="322" width="140" height="42" fill="#424256"/>
+  <text x="386" y="349" text-anchor="middle" fill="#fff" font-size="13">bg 전환</text>
+  <rect x="464" y="322" width="140" height="42" fill="#c85656"/>
+  <text x="534" y="349" text-anchor="middle" fill="#fff" font-size="13">세션 닫기</text>
+</svg>
