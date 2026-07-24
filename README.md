@@ -93,8 +93,8 @@
 자주 쓰는 세션을 **관리(★)** 에 담아두면 닫혀도 남습니다. **`전체 이어서 열기`** 한 번이면 열어뒀던 폴더에서 대화까지 이어서 한꺼번에 다시 엽니다.
 
 ### 📋 상세 정보 · ⚙ 설정 · 트레이
-<img src="docs/images/detail.svg" width="560" alt="세션 상세"><br>
-<img src="docs/images/settings.svg" width="640" alt="설정"><br>
+<img src="docs/images/detail.png" width="560" alt="세션 상세"><br>
+<img src="docs/images/settings.png" width="640" alt="설정"><br>
 <img src="docs/images/tray.svg" width="360" alt="트레이 메뉴">
 
 - **상세 정보**(상태칸 더블클릭): 경로/세션ID 확인·복사 + 그 세션의 모든 액션
