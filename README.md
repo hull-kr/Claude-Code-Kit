@@ -8,7 +8,11 @@
   <a href="https://github.com/hull-kr/Claude-Code-Kit/releases/latest/download/CCKitSetup.exe">
     <b>⬇️ 다운로드 — CCKitSetup.exe</b>
   </a>
-  &nbsp;·&nbsp; Windows 10/11 &nbsp;·&nbsp; 무료(Freeware)
+  &nbsp;·&nbsp;
+  <a href="https://github.com/hull-kr/Claude-Code-Kit/releases/latest/download/CCKitSetup.zip">
+    ZIP 버전(크롬 다운로드 막힐 때)
+  </a>
+  <br>Windows 10/11 &nbsp;·&nbsp; 무료(Freeware)
 </p>
 
 <p align="center"><img src="docs/images/demo.gif" width="820" alt="CCKit 데모 — 세션 그룹 + 다크/라이트 테마"></p>
@@ -37,6 +41,8 @@
 ## 📥 설치
 
 1. 위 **다운로드** 버튼으로 `CCKitSetup.exe` 받기 → 실행
+   - **⚠️ 크롬/엣지에서 다운로드가 막히거나 "위험한 파일" 로 뜨면:** 다운로드 표시줄의 **∧(또는 ⋯) → `계속`/`유지`** 를 누르세요.
+     안 되면 **[ZIP 버전](https://github.com/hull-kr/Claude-Code-Kit/releases/latest/download/CCKitSetup.zip)** 을 받아 **압축을 풀면 안에 `CCKitSetup.exe`** 가 있습니다. (무료라 코드 서명을 안 해 브라우저가 습관적으로 막는 것 — 파일 자체는 안전)
 2. **⚠️ "Windows의 PC를 보호했습니다" 경고가 뜹니다.**
    이 프로그램은 **무료 자유 소프트웨어라 코드 서명(유료 인증서)을 하지 않았습니다.**
    해로운 게 아니라, 서명이 없어 Windows가 습관적으로 띄우는 경고예요.
