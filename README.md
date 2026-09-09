@@ -8,14 +8,10 @@
   <a href="https://github.com/hull-kr/Claude-Code-Kit/releases/latest/download/CCKitSetup.exe">
     <b>⬇️ 다운로드 — CCKitSetup.exe</b>
   </a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/hull-kr/Claude-Code-Kit/releases/latest/download/CCKitSetup.zip">
-    ZIP 버전(크롬 다운로드 막힐 때)
-  </a>
-  <br>Windows 10/11 &nbsp;·&nbsp; 무료(Freeware)
+  &nbsp;·&nbsp; Windows 10/11 &nbsp;·&nbsp; 무료(Freeware)
 </p>
 
-<p align="center"><img src="docs/images/demo.gif" width="820" alt="CCKit 데모 — 세션 그룹 + 다크/라이트 테마"></p>
+<p align="center"><img src="docs/images/panel.png" width="820" alt="컨트롤 패널"></p>
 
 ---
 
@@ -41,16 +37,37 @@
 ## 📥 설치
 
 1. 위 **다운로드** 버튼으로 `CCKitSetup.exe` 받기 → 실행
-   - **⚠️ 크롬/엣지에서 다운로드가 막히거나 "위험한 파일" 로 뜨면:** 다운로드 표시줄의 **∧(또는 ⋯) → `계속`/`유지`** 를 누르세요.
-     안 되면 **[ZIP 버전](https://github.com/hull-kr/Claude-Code-Kit/releases/latest/download/CCKitSetup.zip)** 을 받아 **압축을 풀면 안에 `CCKitSetup.exe`** 가 있습니다. (무료라 코드 서명을 안 해 브라우저가 습관적으로 막는 것 — 파일 자체는 안전)
 2. **⚠️ "Windows의 PC를 보호했습니다" 경고가 뜹니다.**
    이 프로그램은 **무료 자유 소프트웨어라 코드 서명(유료 인증서)을 하지 않았습니다.**
    해로운 게 아니라, 서명이 없어 Windows가 습관적으로 띄우는 경고예요.
    → **`추가 정보`** 클릭 → **`실행`** 누르면 설치됩니다.
-3. 설치 후 트레이 아이콘(또는 바탕화면 아이콘) 더블클릭으로 패널을 엽니다.
+3. **선행 프로그램 선택** — 설치할 것에 체크합니다 (아래 참고).
+4. 설치 후 트레이 아이콘(또는 바탕화면 아이콘) 더블클릭으로 패널을 엽니다.
 
-> 💡 먼저 **Claude Code CLI** 가 설치돼 있어야 합니다 (`claude --version` 으로 확인).
-> Windows Terminal 이 없으면 설치할 때 자동으로 깔아줍니다(winget).
+### 🧩 선행 프로그램도 같이 깔아줍니다
+
+**아무것도 없는 새 PC라면 이것만 실행하면 됩니다.** 설치 마법사가 **Node.js · Git · Python · Claude Code** 를 함께 설치합니다.
+
+- **공식 사이트에서 직접** 내려받습니다 — `nodejs.org` · `git-scm.com` · `python.org`
+- 항상 **최신판**을 자동으로 찾아 받습니다
+- **`Program Files` 같은 표준 위치**에 설치되고, **PATH도 각 설치 프로그램이 직접 등록**합니다
+- 다운로드 **진행률**과 설치 진행 상황이 화면에 표시됩니다
+- 이미 깔려 있는 것은 **버전과 함께 "설치됨"으로 표시되고 체크가 꺼져 있습니다.** 체크하면 최신판으로 다시 설치합니다
+
+<img src="docs/images/setup-tasks.png" width="620" alt="선행 프로그램 선택">
+
+> 💡 **Claude Code 도 여기서 같이 설치됩니다.** 미리 깔아둘 필요 없습니다.
+> Windows Terminal 도 없으면 자동으로 설치합니다.
+
+### 명령이 인식되지 않을 때
+
+`claude` · `node` 명령을 못 찾는다고 나오면, **터미널을 닫고 새로 여세요.** PATH는 프로그램이 시작될 때 한 번만 읽히기 때문입니다.
+
+그래도 안 되면 **설정 → `환경변수 등록/복구`** 를 누르세요. 표준 위치뿐 아니라 winget 설치 위치, 사용자 폴더 설치 위치까지 전부 찾아 PATH에 등록합니다.
+
+<img src="docs/images/settings-prereq.png" width="620" alt="설정 · 선행 프로그램">
+
+설정 화면에서 각 프로그램의 **설치 여부 · 버전 · 최신판인지**를 한눈에 볼 수 있고, `재설치` 로 언제든 최신판으로 바꿀 수 있습니다.
 
 ---
 
@@ -60,14 +77,13 @@
 |---|---|
 | 🖼️ **이미지 붙여넣기** | `Ctrl+Shift+V` 로 클립보드 이미지 저장 + 경로 자동 입력 |
 | 🗂️ **컨트롤 패널** | 세션 열기·닫기·관리, 상태 색, 다중 선택, 정렬 |
-| 🏷️ **세션 그룹** `NEW` | 관리 세션을 그룹(카테고리)으로 정리 — 상단 탭·드래그 정렬·그룹색 |
-| 🌗 **다크 / 라이트 테마** `NEW` | 화면 우하단 토글로 즉시 전환 |
 | ➕ **새 세션** | 폴더·이름·원격·관리 옵션으로 새 세션 한 번에 생성 |
 | 🌙 **bg 전환** | 실행 중 세션을 백그라운드로 (창 닫고 계속 실행) |
 | 📱 **리모트 컨트롤** | 폰/웹(claude.ai/code)에서 이 PC 세션 조종 |
 | 🔹 **서브에이전트 표시** | 상태칸 `🔹N` → 클릭 시 작업 중 에이전트 목록 |
 | ★ **관리 / 이어서 열기** | 즐겨찾기 세션 + 한 번에 복원 |
 | 🔄 **리붓 자동 복원** | 로그인 시 리붓 직전 세션 자동 복원 |
+| 🧩 **선행 프로그램 설치** | Node.js·Git·Python·Claude Code 를 공식 사이트에서 직접 받아 설치 |
 | 🌐 **다국어** | 한국어 / English / 日本語 / 中文 |
 
 ---
@@ -87,14 +103,6 @@
 - **모든 세션** 탭에서 열린·닫힌 세션을 한눈에 (닫힌 세션 열기/삭제, 빈 세션 정리)
 
 <img src="docs/images/all-sessions.png" width="820" alt="모든 세션">
-
-### 🏷️ 세션 그룹 `NEW`
-관리 세션이 많아지면 **그룹(카테고리)** 으로 정리합니다. 상단 그룹 탭 `[전체] [미분류] [그룹들…] [＋ 그룹]` — **드래그로 순서 변경**, 그룹별 자동 색상, 우클릭으로 지정·이름변경·삭제. `bg 전환`으로 만든 세션은 **부모 세션의 그룹을 상속**하고, 그룹이 많아지면 탭이 자동으로 여러 줄로 접힙니다.
-
-### 🌗 다크 / 라이트 테마 `NEW`
-화면 **오른쪽 아래 토글 버튼**으로 다크 ⇄ 라이트를 즉시 전환합니다. (아래 왼쪽=다크, 오른쪽=라이트)
-
-<img src="docs/images/groups-dark.png" width="410" alt="다크 모드 + 세션 그룹"> <img src="docs/images/groups-light.png" width="410" alt="라이트 모드 + 세션 그룹">
 
 ### ➕ 새 세션
 하단 **`＋ 새 세션`** → 폴더 선택 + 세션명 + **원격 연결**(기본 켜짐) + 관리 추가(선택). 새 폴더의 "이 폴더를 신뢰?" 물음은 자동 통과, 이름도 자동 지정.
@@ -131,7 +139,7 @@
 <img src="docs/images/tray.png" width="360" alt="트레이 메뉴">
 
 - **상세 정보**(상태칸 더블클릭): 경로/세션ID 확인·복사 + 그 세션의 모든 액션
-- **설정:** 언어(한/영/일/중) · 라이트/다크 · 세션 셸(cmd/PowerShell) · 이미지 붙여넣기 · WT 창 방식(탭/따로) · 로그인 자동 복원 · 절전 방지 · 리모트 유휴 유지 · **선행 프로그램 설치**(Node.js·Python·Git·Claude Code)
+- **설정:** 언어(한/영/일/중) · 이미지 붙여넣기 · WT 창 방식(탭/따로) · 로그인 자동 복원 · 절전 방지 · 리모트 유휴 유지
 - **트레이 메뉴:** 패널 열기 · 이어서 열기 · 설치 폴더 · 다시 시작 · 종료
 
 ### 🔄 리붓 자동 복원
@@ -154,8 +162,9 @@ ccd = claude --dangerously-skip-permissions
 
 ## 📋 요구사항
 - **Windows 10 / 11**
-- **Claude Code CLI** (`claude --version`)
-- **Windows Terminal** (없으면 설치 시 자동 설치/업데이트)
+- 아래는 **설치 마법사가 함께 깔아줍니다.** 미리 준비할 필요 없습니다.
+  - **Claude Code CLI** · **Node.js** · **Git** · **Python**
+  - **Windows Terminal**
 
 ## 📄 라이선스 / 제작
 - **제작:** [hull.kr](https://hull.kr) · **문의:** kimkap10@gmail.com
