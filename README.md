@@ -37,6 +37,7 @@
 ## 📥 설치
 
 1. 위 **다운로드** 버튼으로 `CCKitSetup.exe` 받기 → 실행
+   > 크롬이 `.exe` 다운로드를 막으면 [releases/latest](https://github.com/hull-kr/Claude-Code-Kit/releases/latest) 에서 **`CCKitSetup.zip`** 을 받아 압축을 풀고 실행하세요.
 2. **⚠️ "Windows의 PC를 보호했습니다" 경고가 뜹니다.**
    이 프로그램은 **무료 자유 소프트웨어라 코드 서명(유료 인증서)을 하지 않았습니다.**
    해로운 게 아니라, 서명이 없어 Windows가 습관적으로 띄우는 경고예요.
