@@ -13,6 +13,9 @@
 <p align="center">
   <sub>크롬이 <code>.exe</code> 다운로드를 막으면 <a href="https://github.com/hull-kr/Claude-Code-Kit/releases/latest/download/CCKitSetup.zip">CCKitSetup.zip</a> 을 받아 압축을 풀고 실행하세요.</sub>
 </p>
+<p align="center">
+  <sub>📖 자세한 사용법은 <a href="https://claudecodelab.tistory.com/2">여기서 확인하세요</a>.</sub>
+</p>
 
 <p align="center"><img src="docs/images/panel.png" width="820" alt="컨트롤 패널"></p>
 
