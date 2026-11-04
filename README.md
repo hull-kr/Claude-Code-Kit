@@ -16,6 +16,9 @@
 <p align="center">
   <sub>📖 자세한 사용법은 <a href="https://claudecodelab.tistory.com/2">여기서 확인하세요</a>.</sub>
 </p>
+<p align="center">
+  <sub>🍎 Mac 버전은 <a href="https://github.com/hull-kr/Claude-Code-Kit-Mac">여기서 받으세요</a>.</sub>
+</p>
 
 <p align="center"><img src="docs/images/panel.png" width="820" alt="컨트롤 패널"></p>
 
