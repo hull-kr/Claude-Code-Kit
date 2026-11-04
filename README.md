@@ -95,6 +95,7 @@
 | 🔄 **리붓 자동 복원** | 로그인 시 리붓 직전 세션 자동 복원 |
 | 🧩 **선행 프로그램 설치** | Node.js·Git·Python·Claude Code 를 공식 사이트에서 직접 받아 설치 |
 | ⏳ **세션 보관 기간 · 기간만료 표시** | Claude Code 의 대화 자동 삭제 기간을 설정에서 조정, 사라진 이유를 "기간만료"로 바로 표시 |
+| 🔑 **로그인 확인** | API 키(환경변수·settings.json) 상태 확인·저장·비우기 + 구독 로그인 상태 확인·진행 |
 | 🌐 **다국어** | 한국어 / English / 日本語 / 中文 |
 
 ---
@@ -175,6 +176,15 @@ Claude Code 본체는 기본적으로 **30일이 지난 세션 대화(jsonl)를 
 
 <img src="docs/images/retention-setting.png" width="620" alt="세션 보관 기간 설정"><br>
 <img src="docs/images/expired-tabs.png" width="820" alt="기간만료 표시">
+
+### 🔑 로그인 확인
+키를 예전에 설정해두고 잊어버린 채 구독(Claude.ai) 로그인을 하면, Claude Code 가 키를 우선 써버려서 구독 로그인이 먹통처럼 보이는 경우가 있습니다. **설정 → 사용 설명서** 아래 **"로그인 확인"** 탭에서 원인을 바로 확인하고 정리할 수 있습니다.
+
+- **API 키 설정:** OS 환경변수 / `settings.json` 의 `env` / `apiKeyHelper` 세 곳을 각각 따로 상태 확인·저장·비우기. 우선순위(OS 환경변수 > `env` > `apiKeyHelper` > 구독 로그인)도 안내.
+- **구독(Claude.ai) 로그인 상태:** 로그인 여부·계정·플랜 확인, **"구독 로그인 진행"** 버튼으로 새 터미널에서 `/login` 자동 실행 — 로그인이 끝나면 그 임시 세션은 자동으로 정리됩니다.
+
+<img src="docs/images/login-check-apikey.png" width="820" alt="API 키 설정"><br>
+<img src="docs/images/login-check-subscription.png" width="820" alt="구독 로그인 상태">
 
 ### ⌨️ ccd 단축 명령
 ```
