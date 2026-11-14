@@ -20,7 +20,7 @@
   <sub>🍎 Mac 버전은 <a href="https://github.com/hull-kr/Claude-Code-Kit-Mac">여기서 받으세요</a>.</sub>
 </p>
 
-> 🆕 **v1.3.0 - 타사 API 설정**: Claude 구독 대신 **OpenRouter 키로 다른 회사 모델(GPT-5.6 Luna 등)을 Claude Code 에서** 쓸 수 있습니다. 폴더(프로젝트)별로만 적용되고 전역 설정은 건드리지 않습니다. → [자세히 보기](#third-party-api)
+> 🆕 **세션별 API 설정**: 세션(폴더)마다 **OpenRouter 키(GPT-5.6 Luna 등 다른 회사 모델)** 나 **Anthropic API 키**를 골라 씁니다. 등록한 모델로만 열리고, PC 전체 설정은 건드리지 않습니다. 세션이 많아도 **검색창**으로 바로 찾습니다. → [자세히 보기](#session-api)
 
 <p align="center"><img src="docs/images/panel.png" width="820" alt="컨트롤 패널"></p>
 
@@ -98,7 +98,8 @@
 | 🧩 **선행 프로그램 설치** | Node.js·Git·Python·Claude Code 를 공식 사이트에서 직접 받아 설치 |
 | ⏳ **세션 보관 기간 · 기간만료 표시** | Claude Code 의 대화 자동 삭제 기간을 설정에서 조정, 사라진 이유를 "기간만료"로 바로 표시 |
 | 🔑 **로그인 확인** | API 키(환경변수·settings.json) 상태 확인·저장·비우기 + 구독 로그인 상태 확인·진행 |
-| 🌐 **타사 API 설정** | OpenRouter 키로 다른 모델(GPT 등) 사용 - 프로필 저장, 세션 우클릭으로 폴더별 적용·해제 |
+| 🌐 **세션별 API 설정** | OpenRouter 키(GPT 등 다른 모델) · Anthropic API 키를 프로필로 저장, 세션 우클릭으로 폴더별 적용·해제. 등록한 모델로 잠금 |
+| 🔍 **세션 검색** | 제목·폴더·그룹으로 세션 찾기 - 지금 탭과 선택한 그룹 안에서, 탭을 옮겨도 검색어 유지 |
 | 🌐 **다국어** | 한국어 / English / 日本語 / 中文 |
 
 ---
@@ -124,14 +125,14 @@
 
 - **정보** — 상세 정보, 세션ID 복사
 - **탐색** — wt 보기, 폴더 열기, 이름 바꾸기
-- **그룹** — 그룹 지정 · **타사 API 설정**(프로필 적용/해제, 지금 적용된 것에 체크 표시)
+- **그룹** — 그룹 지정 · **세션별 API 설정**(프로필 적용/해제, 지금 적용된 것에 체크 표시)
 - **상태 전환** — 세션 재시작(닫고 바로 다시 열기) · 리모트 켜기/끄기 · 관리 추가/제거 · bg 전환
 - **닫기/삭제** — 아래쪽에 따로 구분
 
 <img src="docs/images/context-menu.png" width="820" alt="세션 우클릭 메뉴">
 
 ### ➕ 새 세션
-하단 **`＋ 새 세션`** → 폴더 선택 + 세션명 + **원격 연결**(기본 켜짐) + 관리 추가(선택) + **타사 API 프로필**(선택, 안 고르면 클로드 모델). 새 폴더의 "이 폴더를 신뢰?" 물음은 자동 통과, 이름도 자동 지정.
+하단 **`＋ 새 세션`** → 폴더 선택 + 세션명 + **원격 연결**(기본 켜짐) + 관리 추가(선택) + **세션별 API 프로필**(선택, 안 고르면 지금 PC 의 로그인 방식 - 클로드 구독제 또는 클로드 API). 새 폴더의 "이 폴더를 신뢰?" 물음은 자동 통과, 이름도 자동 지정.
 
 <img src="docs/images/new-session.png" width="820" alt="새 세션">
 
@@ -191,46 +192,58 @@ Claude Code 본체는 기본적으로 **30일이 지난 세션 대화(jsonl)를 
 <img src="docs/images/login-check-apikey.png" width="820" alt="API 키 설정"><br>
 <img src="docs/images/login-check-subscription.png" width="820" alt="구독 로그인 상태">
 
-<a id="third-party-api"></a>
-### 🌐 타사 API 설정 - OpenRouter 로 다른 모델 쓰기
-Claude 구독 대신 **[OpenRouter](https://openrouter.ai) 키**로 다른 회사 모델(예: GPT-5.6 Luna)을 Claude Code 에서 그대로 씁니다. 코드 읽기·수정, 명령 실행, 로컬 스킬까지 평소처럼 동작합니다.
+<a id="session-api"></a><a id="third-party-api"></a>
+### 🌐 세션별 API 설정 - 세션마다 다른 키·모델 쓰기
+세션(폴더)마다 **[OpenRouter](https://openrouter.ai) 키**로 다른 회사 모델(예: GPT-5.6 Luna)을 쓰거나, **[Anthropic API 키](https://platform.claude.com)**로 Claude 모델을 씁니다. 코드 읽기·수정, 명령 실행, 로컬 스킬까지 평소처럼 동작합니다.
 
-- **고른 세션 폴더에만 적용됩니다.** 다른 프로젝트는 계속 클로드 모델로 동작하고, PC 전체 설정은 건드리지 않습니다.
+- **고른 세션 폴더에만 적용됩니다.** 다른 폴더는 지금 PC 의 로그인 방식(클로드 구독제 또는 클로드 API) 그대로이고, PC 전체 설정은 건드리지 않습니다.
+- **등록한 모델로만 열립니다.** 그 폴더에서는 `/model` 로 다른 모델로 바꿀 수 없습니다(수업·공용 키에서 비싼 모델로 새는 것 방지).
 - git 저장소면 키가 커밋되지 않게 자동으로 막아 줍니다.
+- OpenAI·구글 키는 직접 붙일 수 없어(프록시 필요) 두 회사만 지원합니다.
 
-**1) 프로필 추가** - [openrouter.ai](https://openrouter.ai) 에서 키(`sk-or-v1-...`)를 발급받고 크레딧을 충전한 뒤, 패널 왼쪽 **"타사 API 설정"** 탭에서 **이름 · 모델 · API 키**를 넣고 **추가**를 누릅니다. 모델 칸은 글자 일부만 쳐도(예: `luna`) 목록에서 찾아 줍니다. `↑` `↓` 로 고르고 `Enter` 로 확정합니다.
+**1) 오픈라우터 프로필 등록** - [openrouter.ai](https://openrouter.ai) 에서 키(`sk-or-v1-...`)를 발급받고 크레딧을 충전한 뒤, 패널 왼쪽 **"세션별 API 설정"** 탭의 **오픈라우터 API 키 프로필** 칸에 **이름 · 모델 · API 키**를 넣고 **추가**를 누릅니다. 모델 칸은 글자 일부만 쳐도(예: `luna`) 목록에서 찾아 줍니다. `↑` `↓` 로 고르고 `Enter` 로 확정합니다.
 
-<img src="docs/images/third-party-api-1-add.png" width="820" alt="프로필 추가 - 모델 자동완성">
+<img src="docs/images/session-api-1-openrouter.png" width="820" alt="오픈라우터 프로필 등록 - 모델 자동완성">
 
-**2) 프로필 목록** - 프로필마다 번호(#)가 붙고, **수정 · 삭제** 버튼으로 관리합니다. 행을 고르면 그 프로필이 적용된 세션이 아래에 보입니다.
+**2) 앤트로픽 프로필 등록** - [platform.claude.com](https://platform.claude.com) 에서 받은 키(`sk-ant-...`)를 **앤트로픽 API 키 프로필** 칸에 넣습니다. 모델 칸에 `son` · `opus` 처럼 일부만 치면 Claude 모델 목록에서 찾아 줍니다.
 
-<img src="docs/images/third-party-api-2-tab.png" width="820" alt="프로필 목록과 적용된 세션">
+<img src="docs/images/session-api-2-anthropic.png" width="820" alt="앤트로픽 프로필 등록 - 모델 자동완성">
 
-**3) 세션에 적용** - 세션 행 **우클릭 → "타사 API 설정"** 에서 프로필을 고릅니다. 지금 적용된 프로필에 체크(✓)가 붙고, 메뉴 이름 옆에 `[프로필 이름]` 이 보입니다. 되돌릴 때는 **"사용 안 함 (클로드 모델)"** 을 고르거나, 탭 아래 **"선택 세션에서 해제"** 를 누릅니다.
+**3) 프로필 목록** - 두 종류 프로필이 한 목록에 모입니다. **수정**을 누르면 위 등록 칸으로 불러와 고칠 수 있고, 고치면 그 프로필을 쓰던 폴더도 새 키·모델로 함께 바뀝니다. 행을 고르면 그 프로필이 적용된 세션이 아래에 보입니다.
 
-<img src="docs/images/third-party-api-3-menu.png" width="820" alt="우클릭 메뉴 - 타사 API 설정">
+<img src="docs/images/session-api-3-list.png" width="820" alt="프로필 목록과 적용된 세션">
 
-**4) 재시작** - 그 폴더에 열려 있는 세션이 있으면 지금 재시작할지 묻습니다. **예**를 누르면 닫았다가 다시 엽니다. 대화는 그대로 이어지고, 모델도 새 설정에 맞춰 자동으로 바뀝니다(해제했으면 클로드 모델로).
+**4) 세션에 적용** - 세션 행 **우클릭 → "세션별 API 설정"** 에서 프로필을 고릅니다. 지금 적용된 프로필에 체크(✓)가 붙고, 메뉴 이름 옆에 `[프로필 이름]` 이 보입니다. 되돌릴 때는 **"사용 안 함"** 을 고르거나, 탭 아래 **"선택 세션에서 해제"** 를 누릅니다.
 
-<img src="docs/images/third-party-api-4-restart.png" width="820" alt="재시작 확인">
+<img src="docs/images/session-api-4-menu.png" width="820" alt="우클릭 메뉴 - 세션별 API 설정">
 
-**새 세션에서 바로 쓰기** - **＋ 새 세션** 창 아래에서 프로필을 고르면 처음부터 타사 모델로 열립니다. 이때 **원격 연결** 체크는 자동으로 꺼집니다(타사 API 세션은 리모트를 쓸 수 없음).
+**5) 재시작** - 그 폴더에 열려 있는 세션이 있으면 지금 재시작할지 묻습니다. **예**를 누르면 닫았다가 다시 엽니다. 대화는 그대로 이어지고, 모델도 새 설정에 맞춰 바뀝니다.
 
-<img src="docs/images/third-party-api-5-new-session.png" width="820" alt="새 세션 - 타사 API 프로필 선택">
+<img src="docs/images/session-api-5-restart.png" width="820" alt="재시작 확인">
 
-**실행 화면** - 세션 위쪽과 상태줄에 타사 모델 이름(`openai/gpt-5.6-luna`)이 보이면 적용된 것입니다.
+**새 세션에서 바로 쓰기** - **＋ 새 세션** 창 아래 **세션별 API 프로필**에서 고르면 처음부터 그 키·모델로 열립니다. 고르면 **원격 연결** 체크는 자동으로 꺼집니다(키 방식 세션은 리모트를 쓸 수 없음).
 
-<img src="docs/images/third-party-api-6-running.png" width="820" alt="루나 모델로 실행 중인 세션">
+<img src="docs/images/session-api-6-new-session.png" width="820" alt="새 세션 - 세션별 API 프로필 선택">
+
+**실행 화면** - 세션 위쪽과 상태줄에 등록한 모델 이름이 보이고, `API Usage Billing` 으로 표시되면 적용된 것입니다.
+
+<img src="docs/images/session-api-7-running.png" width="820" alt="루나 모델로 실행 중인 세션">
 
 **알아둘 점**
-| 항목 | 타사 API(키) 세션 |
+| 항목 | 키 방식 세션(오픈라우터 · 앤트로픽) |
 |---|---|
 | 코드 읽기·수정, 명령 실행, 로컬 파일 만들기, 로컬 스킬 | ✅ 됨 |
 | Artifact · Docs · 리모트 컨트롤 · claude.ai 커넥터 | ❌ 안 됨 (claude.ai 계정 로그인이 필요한 기능) |
-- 위 제한은 **Anthropic API 키로 연결할 때도 똑같습니다.** 모델이 아니라 "키 방식 로그인"이라서 생기는 제한입니다. 키 방식 세션에서는 `/login` 을 해도 키가 우선 적용됩니다.
-- **OpenAI 키(`sk-proj-...`)는 직접 쓸 수 없습니다.** OpenAI 에는 Claude Code 가 부르는 주소(`/v1/messages`)가 없어 404 가 나고, OpenRouter 주소에 OpenAI 키를 넣으면 401 이 납니다. 같은 OpenAI 모델을 OpenRouter 를 거쳐 쓰면 됩니다(OpenRouter 계정에 OpenAI 키를 등록하는 BYOK 도 가능).
+- 세션 아래에 `claude.ai connectors are disabled because ANTHROPIC_API_KEY or another auth source is set…` 경고가 뜨는 것은 **정상**입니다. 키로 동작하고 있다는 뜻이고, 따로 할 일은 없습니다.
+- 앤트로픽 키는 처음 열 때 "이 키를 쓸까요?" 를 묻지 않고 바로 적용됩니다(한 번 "No" 를 고르면 그 뒤로 말없이 구독제로 도는 문제를 피하려고 키를 `apiKeyHelper` 로 넣습니다).
+- 앤트로픽 키 자체에는 "이 모델만 허용" 기능이 없습니다. 비용은 [Claude Console](https://platform.claude.com) 에서 **수업용 워크스페이스를 따로 만들어 지출 한도·모델별 속도 한도**를 걸어 묶으세요(기본 워크스페이스에는 지출 한도를 걸 수 없음).
+- **OpenAI 키(`sk-proj-...`)는 직접 쓸 수 없습니다.** OpenAI 에는 Claude Code 가 부르는 주소(`/v1/messages`)가 없어 404 가 나고, OpenRouter 주소에 OpenAI 키를 넣으면 401 이 납니다. 같은 OpenAI 모델을 OpenRouter 를 거쳐 쓰면 됩니다.
 - 다른 회사 모델은 Claude 만큼 Claude Code 도구에 맞춰져 있지 않아 가끔 실수를 합니다. 예를 들어 GPT 계열이 Windows 경로의 `\` 를 잘못 넘겨 파일 만들기에 실패하면, 경로를 `/` 로 쓰라고 말해 주세요(`D:/project/a.docx`).
-- 이 화면의 문구는 아직 한국어만 지원합니다.
+- 화면 문구는 한국어 · English · 日本語 · 中文 모두 지원합니다.
+
+<a id="session-search"></a>
+### 🔍 세션 검색
+세션이 많아지면 목록 위 **검색창**에 제목·폴더·그룹 일부를 치세요. 지금 보는 탭(관리/열린/닫힌/모든 세션)과 고른 그룹 안에서만 걸러 줍니다. 왼쪽 메뉴로 탭을 옮겨도 검색어는 그대로 남고, **초기화** 버튼이나 `Esc` 로 지웁니다.
 
 ### ⌨️ ccd 단축 명령
 ```
