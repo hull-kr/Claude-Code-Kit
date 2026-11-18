@@ -14,13 +14,15 @@
   <sub>크롬이 <code>.exe</code> 다운로드를 막으면 <a href="https://github.com/hull-kr/Claude-Code-Kit/releases/latest/download/CCKitSetup.zip">CCKitSetup.zip</a> 을 받아 압축을 풀고 실행하세요.</sub>
 </p>
 <p align="center">
-  <sub>📖 자세한 사용법은 <a href="https://claudecodelab.tistory.com/2">여기서 확인하세요</a>.</sub>
+  <sub>📖 자세한 사용법은 <a href="https://hull.kr/cckit_/6">CCKit 사용법 공지</a>에서 확인하세요.</sub>
 </p>
 <p align="center">
   <sub>🍎 Mac 버전은 <a href="https://github.com/hull-kr/Claude-Code-Kit-Mac">여기서 받으세요</a>.</sub>
 </p>
 
-> 🆕 **세션별 API 설정**: 세션(폴더)마다 **OpenRouter 키(GPT-5.6 Luna 등 다른 회사 모델)** 나 **Anthropic API 키**를 골라 씁니다. 등록한 모델로만 열리고, PC 전체 설정은 건드리지 않습니다. 세션이 많아도 **검색창**으로 바로 찾습니다. → [자세히 보기](#session-api)
+> 🆕 **v1.4.0 - 공지사항 · 업데이트 알림**: CCKit 새 소식이 **패널 안 공지사항 · 새 소식 팝업 · 아래 공지 띠**로 바로 보입니다. 기능이 크게 바뀐 업데이트는 CCKit 을 켤 때 **팝업으로 알려 주고, 누르면 그 자리에서 설치**됩니다. → [공지사항](#notice) · [업데이트 알림](#update-alert)
+>
+> **세션별 API 설정**: 세션(폴더)마다 **OpenRouter 키(GPT-5.6 Luna 등 다른 회사 모델)** 나 **Anthropic API 키**를 골라 씁니다. 등록한 모델로만 열리고, PC 전체 설정은 건드리지 않습니다. 세션이 많아도 **검색창**으로 바로 찾습니다. → [자세히 보기](#session-api)
 
 <p align="center"><img src="docs/images/panel.png" width="820" alt="컨트롤 패널"></p>
 
@@ -100,6 +102,8 @@
 | 🔑 **로그인 확인** | API 키(환경변수·settings.json) 상태 확인·저장·비우기 + 구독 로그인 상태 확인·진행 |
 | 🌐 **세션별 API 설정** | OpenRouter 키(GPT 등 다른 모델) · Anthropic API 키를 프로필로 저장, 세션 우클릭으로 폴더별 적용·해제. 등록한 모델로 잠금 |
 | 🔍 **세션 검색** | 제목·폴더·그룹으로 세션 찾기 - 지금 탭과 선택한 그룹 안에서, 탭을 옮겨도 검색어 유지 |
+| 📢 **공지사항** | CCKit 새 소식을 패널 공지 화면 · 새 소식 팝업 · 아래 공지 띠로. 「오늘 보지 않기」, 띠 멈춤(기본 3일 뒤 자동 해제) |
+| 🔔 **업데이트 알림** | 큰 업데이트(1.3 → 1.4)는 켤 때마다 팝업, 누르면 바로 설치. 「24시간 보지 않기」. 설치는 마지막에 몇 초만 꺼졌다 다시 켜짐 |
 | 🌐 **다국어** | 한국어 / English / 日本語 / 中文 |
 
 ---
@@ -244,6 +248,57 @@ Claude Code 본체는 기본적으로 **30일이 지난 세션 대화(jsonl)를 
 <a id="session-search"></a>
 ### 🔍 세션 검색
 세션이 많아지면 목록 위 **검색창**에 제목·폴더·그룹 일부를 치세요. 지금 보는 탭(관리/열린/닫힌/모든 세션)과 고른 그룹 안에서만 걸러 줍니다. 왼쪽 메뉴로 탭을 옮겨도 검색어는 그대로 남고, **초기화** 버튼이나 `Esc` 로 지웁니다.
+
+<a id="notice"></a>
+### 📢 공지사항 - 새 소식 팝업 · 공지 띠
+
+CCKit 새 소식과 업데이트 안내는 [hull.kr CCKit 소식 게시판](https://hull.kr/cckit_)에 올라오고, CCKit 이 알아서 받아 보여 줍니다.
+
+**1) 공지사항 화면** - 패널 왼쪽 **공지사항** 메뉴. 글마다 **구분**(공지 · 소식)과 **상태**(새 글 · 읽음)가 보이고, 제목을 누르면 브라우저로 그 글이 열립니다. 안 본 글이 있으면 메뉴에 `공지사항 (2)` 처럼 개수가 붙습니다.
+
+<img src="https://raw.githubusercontent.com/hull-kr/Claude-Code-Kit/main/docs/images/notice-1-page.png" width="820" alt="공지사항 화면">
+
+**2) 새 소식 팝업** - 새 글이 있으면 패널을 띄울 때 팝업으로 알려 줍니다.
+
+<img src="https://raw.githubusercontent.com/hull-kr/Claude-Code-Kit/main/docs/images/notice-2-popup.png" width="460" alt="새 소식 팝업">
+
+| 단추 | 하는 일 |
+|---|---|
+| **공지 보기** | 공지 화면과 브라우저로 글을 열고, 그 글은 다시 띄우지 않습니다 |
+| **오늘 보지 않기** | 지금 나온 글은 다음 날에도 다시 띄우지 않습니다(그 뒤에 올라온 새 글만 다시 알림) |
+| **닫기** | 다음에 패널을 띄우면 다시 알려 줍니다 |
+
+**3) 공지 띠** - 게시판에서 「공지」로 고정한 글의 제목과 내용 일부가 패널 맨 아래에 나옵니다. 글이 여러 개면 몇 초마다 위로 롤링하고, 누르면 그 글이 열립니다.
+
+<img src="https://raw.githubusercontent.com/hull-kr/Claude-Code-Kit/main/docs/images/notice-3-ticker.png" width="820" alt="공지 띠">
+
+- `공지` 옆 **⏸ 멈춤** 단추로 롤링을 멈출 수 있습니다. 멈춘 뒤 정한 일수(기본 **3일**)가 지나면 저절로 다시 돌아갑니다.
+- 옆의 **⚙ 톱니바퀴**를 누르면 설정의 「공지사항」 칸으로 바로 갑니다. 일수는 원하는 대로 바꿀 수 있습니다.
+
+<img src="https://raw.githubusercontent.com/hull-kr/Claude-Code-Kit/main/docs/images/notice-4-settings.png" width="820" alt="설정 - 공지사항">
+
+> 인터넷이 안 되거나 게시판을 못 읽어도 CCKit 실행에는 영향이 없습니다. 공지 화면에는 마지막으로 받아 둔 목록이 보입니다.
+
+<a id="update-alert"></a>
+### 🔔 업데이트 알림
+
+**기능이 크게 바뀐 업데이트**(1.3 → 1.4 처럼 앞자리 · 가운데 자리가 오르는 버전)가 나오면, CCKit 을 켤 때마다 팝업으로 알려 드립니다.
+
+<img src="https://raw.githubusercontent.com/hull-kr/Claude-Code-Kit/main/docs/images/update-1-popup.png" width="460" alt="업데이트 팝업">
+
+| 단추 | 하는 일 |
+|---|---|
+| **지금 업데이트** | 바로 내려받아 설치합니다 |
+| **나중에** | 지금 버전으로 그대로 씁니다(다음에 켤 때 다시 알림) |
+| **24시간 보지 않기** | 하루 동안 알리지 않습니다(그 사이 더 새 버전이 나오면 바로 다시 알림) |
+
+**지금 업데이트**를 누르면 설정 화면에서 내려받기 진행률이 보이고, 이어서 설치 진행률이 보입니다.
+
+<img src="https://raw.githubusercontent.com/hull-kr/Claude-Code-Kit/main/docs/images/update-2-progress.png" width="820" alt="업데이트 진행">
+
+- 설치하는 동안 CCKit 은 **켜진 채로** 새 파일을 풀어 두고, **마지막에 몇 초만** 꺼졌다가 새 버전으로 다시 켜집니다.
+- 작은 수정(1.4.0 → 1.4.1 처럼 끝자리만 오르는 버전)은 팝업 없이 트레이 알림만 띄우고, 업데이트는 선택입니다.
+- 설정의 「업데이트」 칸에서 지금 버전 확인 · 새 버전 알림 · 자동 설치를 켜고 끌 수 있습니다.
 
 ### ⌨️ ccd 단축 명령
 ```
